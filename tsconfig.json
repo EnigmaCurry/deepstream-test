@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "declaration": true
+  },
+  "include": ["tests.ts"],
+  "exclude": ["node_modules"],
+  "types": ["node","mocha","chai"],
+  "typeRoots": [
+    "./node_modules/@types",
+    "./node_modules/@types/mocha/index.d.ts",
+    "./node_modules/deepstream.io-client-js/src/client.d.ts"
+  ]
+}
