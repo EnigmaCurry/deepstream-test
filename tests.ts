@@ -13,7 +13,7 @@ describe('stuff', () => {
   before('start deepstream server', (next) => {
     portastic.find({ min: 6020, max: 6030 }).then((ports: Array<number>) => {
       url = `localhost:${ports[0]}`
-      server = new Deepstream({ port: ports[0] })
+      server = new Deepstream({ port: ports[0], logLevel: 'DEBUG' })
       server.on('started', () => {
         expect(server.isRunning()).to.be.true
         client = deepstream(url)
