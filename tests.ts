@@ -7,8 +7,6 @@ const portastic = require('portastic')
 
 describe('stuff', () => {
   let server: any, url: string, client: deepstreamIO.Client
-  // action$ is requests to deepstream - shamefully sent next elements through the tests
-  // deep$ is events coming from deepstream
 
   before('start deepstream server', (next) => {
     portastic.find({ min: 6020, max: 6030 }).then((ports: Array<number>) => {
