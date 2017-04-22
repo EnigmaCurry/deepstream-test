@@ -31,9 +31,9 @@ describe('stuff', () => {
   })
 
   it('should allow creating records', next => {
-    client.record.getRecord('record1').whenReady((record1: deepstreamIO.Record) => record1.set('name', 'record1'))
-    client.record.getRecord('record2').whenReady((record1: deepstreamIO.Record) => record1.set('name', 'record2'))
-    client.record.getRecord('record3').whenReady((record1: deepstreamIO.Record) => record1.set('name', 'record3', next))
+    client.record.getRecord('record1').whenReady((record: deepstreamIO.Record) => record.set('name', 'record1'))
+    client.record.getRecord('record2').whenReady((record: deepstreamIO.Record) => record.set('name', 'record2'))
+    client.record.getRecord('record3').whenReady((record: deepstreamIO.Record) => record.set('name', 'record3', next))
   })
 
   it('should allow creating a list', next => {
